@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Envelo</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div>
+        <h1 class="logo" onclick="reload()">ENVELO</h1>
+        <p>Możesz mieć swoją przesyłkę w kilkanaście sekund</p>
+        <p>Rozpocznij klikając w przycisk</p>
+      </div>
+      <form id="form" class="hidden">
+        <div class="form-controls">
+          <div class="input-control">
+            <label for="phone">Numer telefonu</label>
+            <input
+              maxlength="9"
+              type="tel"
+              id="phone"
+              class="input"
+              name="phone"
+              placeholder="123456789"
+            />
+            <small class="error phone-message"></small>
+          </div>
+          <div class="input-control">
+            <label for="code">Kod odbioru</label>
+            <input
+              class="input"
+              maxlength="4"
+              type="numer"
+              placeholder="0000"
+              id="code"
+            />
+            <small class="error code-message"></small>
+          </div>
+        </div>
+        <div>
+          <div>
+            <small class="error send-message"></small>
+          </div>
+          <button
+            onclick="autenticateData()"
+            type="button"
+            disabled
+            class="btn submit-btn"
+          >
+            Odbierz paczkę
+          </button>
+        </div>
+      </form>
+      <div>
+        <button onclick="handleStart()" class="btn start-btn">
+          Odbierz paczkę
+        </button>
+      </div>
+      <img
+        src="./assets/package.png"
+        class="image"
+        alt="grafika kobieta z psem na smyczy, odbierająca paczkę za pomocą telefonu"
+      />
+    </div>
+
+    <div class="pop-up hidden">
+      <h2>Paczka odebrana!</h2>
+      <p>
+        Zrobiłeś to w czasie 10 sekund! Czy możemy zrobić dla Ciebie coś
+        jeszcze?
+      </p>
+      <div class="pop-up-buttons">
+        <button class="btn end-btn">To wszystko na dziś</button>
+        <button class="btn next-package-btn">Odbierz kolejną paczkę</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
