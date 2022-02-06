@@ -10,3 +10,5 @@ Poprawne dane do logowania: </br>
   Przycisk obierz paczkę jest zablokowany do momentu gdy wpiszemy poprawną długość oraz format telefonu i kodu. </br>
   Walidacja z informacją dotyczącą za krótkiego bądź złego formatu pokazuje się gdy stracimy focus na polu z inputem. </br>
   Gdy dane są w dobrym formacie, jednak paczka nie istnieje w bazie, dostajemy o tym informacje. </br>
+  
+ Po wpisaniu poprawnych danych, mamy możliwość odebrania kolejnej paczki (powrót do ekranu z polami do wpisania danych) lub do ekranu startowego (z samym przyciskiem)
